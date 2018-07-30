@@ -25,7 +25,7 @@ RUN set -ex; \
         apt-get install -y \
                 libmagickwand-dev --no-install-recommends \
                 ; \
-        apt-get clean \
+        apt-get clean ; \
         #Build additional PHP extensions \
         docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ ; \
         docker-php-ext-install gd; \
