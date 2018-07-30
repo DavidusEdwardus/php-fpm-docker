@@ -4,11 +4,30 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN set -ex; \
         apt-get -y update; \
-        apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libmcrypt-dev libczmq-dev libicu-dev libxml2  libxml2-dev libxslt1-dev libxslt1.1 libssl-dev libc-client-dev libkrb5-dev libpspell-dev; \
+        apt-get install -y \
+                libfreetype6-dev \
+                libjpeg62-turbo-dev \
+                libmcrypt-dev \
+                libpng-dev \
+                libmcrypt-dev \
+                libczmq-dev \
+                libicu-dev \
+                libxml2 \
+                libxml2-dev \
+                libxslt1-dev \
+                libxslt1.1 \
+                libssl-dev \
+                libc-client-dev \
+                libkrb5-dev \
+                libpspell-dev \
+                ; \
         apt-get clean
+
 RUN set -ex; \
         apt-get -y update; \
-        apt-get install -y libmagickwand-dev --no-install-recommends; \
+        apt-get install -y \
+                libmagickwand-dev --no-install-recommends \
+                ; \
         apt-get clean
 
 RUN set -ex; \
