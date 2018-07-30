@@ -27,7 +27,7 @@ cd php-fpm-docker
 
 docker pull rayel/php-fpm-docker:7.2-fpm
 
-### Simple usage###
+### Simple usage  
 
 ```
 docker run --env-file .env -v /run:/run -v /srv:/srv -p 127.0.0.1:9000:9000 rayel/php-fpm-docker:7.2-fpm
