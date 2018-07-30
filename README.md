@@ -6,18 +6,18 @@
 
 A set of PHP 7.0, 7.1 and 7.2 FPM images including Composer, which take their config from environment variables. 
 
-Shipped config is for example only , and should be modified for production needs. The following environment variables are currently supported.
+Shipped config is for example only , and should be modified for production needs. The following environment variables are currently supported, with the supplied values listed for reference.
 
-* OUTPUT_BUFFERING
-* MAX_EXECUTION_TIME
-* MAX_INPUT_TIME
-* MAX_INPUT_VARS
-* MEMORY_LIMIT
-* POST_MAX_SIZE
-* FILE_UPLOADS
-* UPLOAD_MAX_FILESIZE
-* MAX_FILE_UPLOADS
-* MYSQL_DEFAULT_SOCKET
+* OUTPUT_BUFFERING - On
+* MAX_EXECUTION_TIME - 30
+* MAX_INPUT_TIME - 60
+* MAX_INPUT_VARS - 2000
+* MEMORY_LIMIT - 123M (this differs from upstream)
+* POST_MAX_SIZE - 100M
+* FILE_UPLOADS - On
+* UPLOAD_MAX_FILESIZE - 100M
+* MAX_FILE_UPLOADS - 20
+* MYSQL_DEFAULT_SOCKET - /run/mysqld/mysqld.sock
 
 ## Usage
 
