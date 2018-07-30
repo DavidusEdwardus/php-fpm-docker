@@ -69,4 +69,4 @@ RUN set -ex; \
 
 COPY php.ini /usr/local/etc/php/
 
-RUN php -r "ini_set('memory_limit','512M'); readfile('http://getcomposer.org/installer');" | php -d memory_limit=250M -- --install-dir=/usr/bin/ --filename=compose
+RUN php -r "ini_set('memory_limit','250M'); readfile('http://getcomposer.org/installer');" | php -d memory_limit=250M -- --install-dir=/usr/bin/ --filename=compose
