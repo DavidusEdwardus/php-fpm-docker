@@ -3,7 +3,7 @@ FROM php:7.0-fpm-stretch
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN set -ex; \
-        #Install depenencies for ImageMagick
+        #Install depenencies for ImageMagick \
         apt-get -y update; \
         apt-get install -y \
                 libfreetype6-dev \
@@ -26,7 +26,7 @@ RUN set -ex; \
                 libmagickwand-dev --no-install-recommends \
                 ; \
         apt-get clean \
-        #Build additional PHP extensions
+        #Build additional PHP extensions \
         docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ ; \
         docker-php-ext-install gd; \
         pecl install imagick ; \
@@ -65,5 +65,5 @@ RUN set -ex; \
 
 COPY php.ini /usr/local/etc/php/
 
-#Install composer locally into the image
+#Install composer locally into the image \
 RUN php -r "ini_set('memory_limit','250M'); readfile('http://getcomposer.org/installer');" | php -d memory_limit=250M -- --install-dir=/usr/bin/ --filename=compose
