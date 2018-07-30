@@ -61,9 +61,9 @@ RUN set -ex; \
         docker-php-ext-install xsl ; \
         docker-php-ext-install xml ; \
         docker-php-ext-install xmlrpc ; \
-        docker-php-ext-install zip
+        docker-php-ext-install zip ; \
+        php -r "ini_set('memory_limit','250M'); readfile('http://getcomposer.org/installer');" | php -d memory_limit=250M -- --install-dir=/usr/bin/ --filename=compose
 
+#Put our local php.ini in place
 COPY php.ini /usr/local/etc/php/
 
-#Install composer locally into the image \
-RUN php -r "ini_set('memory_limit','250M'); readfile('http://getcomposer.org/installer');" | php -d memory_limit=250M -- --install-dir=/usr/bin/ --filename=compose
