@@ -8,9 +8,7 @@ RUN set -ex; \
         apt-get install -y \
                 libfreetype6-dev \
                 libjpeg62-turbo-dev \
-                libmcrypt-dev \
                 libpng-dev \
-                libmcrypt-dev \
                 libczmq-dev \
                 libicu-dev \
                 libxml2 \
@@ -44,7 +42,6 @@ RUN set -ex; \
         docker-php-ext-install imap ; \
         docker-php-ext-install opcache ; \
         docker-php-ext-install pspell ; \
-        docker-php-ext-install mcrypt ; \
         docker-php-ext-install intl ; \
         docker-php-ext-install json ; \
         docker-php-ext-install mbstring ; \
