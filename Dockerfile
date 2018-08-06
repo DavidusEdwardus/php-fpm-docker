@@ -31,6 +31,7 @@ RUN set -ex; \
         pecl install zmq-beta ; \
         docker-php-ext-enable imagick ; \
         docker-php-ext-install bcmath  ; \
+        docker-php-ext-install calendar ; \
         docker-php-ext-enable zmq ; \
         docker-php-ext-install bcmath ; \
         docker-php-ext-install exif ; \
