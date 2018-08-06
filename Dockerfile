@@ -35,6 +35,7 @@ RUN set -ex; \
         docker-php-ext-install bcmath  ; \
         docker-php-ext-enable zmq ; \
         docker-php-ext-install bcmath ; \
+        docker-php-ext-install calendar ; \
         docker-php-ext-install exif ; \
         docker-php-ext-install ftp ; \
         docker-php-ext-install gettext ; \
