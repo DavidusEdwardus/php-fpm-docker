@@ -39,6 +39,7 @@ The above example launches the 7.2 variant on port 9000, mapping /srv into the c
 
 * bcmath
 * Core
+* calendar
 * ctype
 * curl
 * date
